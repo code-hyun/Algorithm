@@ -9,6 +9,7 @@ class Main {
     for(int i=0; i<n; i++){
         arr[i] = sc.nextInt();
     }
+    // 오름차순 정렬
     Arrays.sort(arr);
     
     for(int i=0; i<n; i++){
