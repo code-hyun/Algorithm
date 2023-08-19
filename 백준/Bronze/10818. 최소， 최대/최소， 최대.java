@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,19 +16,18 @@ class Main {
 		for(int i =0; i < N; i++) {
 			array[i] = Integer.parseInt(st.nextToken());
 		}
-		int min = array[0];
-		int max = array[0];
 		
-		for(int i =0; i < N; i++) {
-			if(min > array[i]) {
-				min = array[i];
-			}
-			if(max < array[i]) {
-				max = array[i];
-			}
-			result = min + " " + max;
+		int start = 0;
+		int end = N-1;
+		int min = array[start];
+		int max = array[start];
+		while(start <= end) {
+			min = Math.min(min, array[start]);
+			max = Math.max(max, array[start]);
+			start++;
 		}
-		System.out.println(result);
+		
+		System.out.println(min + " " + max);
 		
 		
 		
